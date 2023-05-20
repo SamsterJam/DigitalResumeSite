@@ -7,10 +7,16 @@ body {
     margin: 0;
     padding: 0;
     color: white;
+    user-select: #083327;
 }
 
 h1{
     margin: 5px;
+}
+
+::selection {
+    color: #093427;
+    background: rgb(188, 214, 192);
 }
 
 #resumeContainer{
@@ -46,22 +52,26 @@ h1{
     max-height: 33%;
     object-fit: cover;
     height: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 
 #aboutMe{
     flex: 1;
     /* backdrop-filter: blur(50px); */
-    border-top-left-radius: 30px;
+    border-top-left-radius: 20px;
     background: rgba(255, 255, 255, 0.05);
     color: white;
-    padding: 5px;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     /*min-height: 100;*/
 }
 
 
 .Section{
-    padding: 2px;
+    padding: 10px;
 
     display: flex;
     flex-direction: column;
@@ -71,7 +81,6 @@ h1{
 }
 
 .subSection{
-    width: auto;
 
     display: flex;
     flex: 1;
@@ -90,7 +99,7 @@ h1{
     border-bottom-left-radius: 30px;
     /*backdrop-filter: blur(100px);*/
     background:rgba(255, 255, 255, 0.1);
-    border: 1px dashed white;
+    border: 2px dashed white;
     padding: 10px;
 }
 
@@ -128,6 +137,7 @@ h1{
 h2{
     margin-top: 0;
     margin-bottom: 5px;
+    margin-left: 5px;
 }
 
 .barOutline{
@@ -139,10 +149,11 @@ h2{
 
     z-index: 2;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(100px);
+    /* backdrop-filter: blur(100px); */
 }
 
 .progressBar{
+    z-index: 1;
     box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
     position: absolute;
     height: 100%;
@@ -173,21 +184,45 @@ hr{
 #projects{
     width: auto;
     flex: 1;
-    padding: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(179, 255, 193, 0.1);
 }
 
 #pastProjectsGroup{
-    border: 1px solid white;
     height: 100%;
     width: 100%;
-    
+    display: flex;
+    flex-direction: column;
 }
 
+#projects hr{
+    width: 80%;
+}
 
 #languages{
     width: auto;
     flex: 0.5;
 }
+
+
+#futureProjects{
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.futProj{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    flex: 1;
+}
+
 
 .icon-grid {
     display: flex;
