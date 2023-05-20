@@ -13,23 +13,19 @@ h1{
     margin: 5px;
 }
 
-
 #resumeContainer{
     margin: 10px;
     display: flex;
     align-items: stretch;
     height: fit-content;
     gap: 10px;
-    backdrop-filter: blur(20px);
     flex-wrap: wrap;
-    min-height: 98vh;
+    min-height: 97vh;
 }
 
 .mainCol{
     min-width: 500px;
-    border-color: aliceblue;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid white;
     border-radius: 5px;
     
     display: flex;
@@ -38,7 +34,12 @@ h1{
     flex: 1;
     overflow: scroll;
     max-height: 97vh;
+    backdrop-filter: blur(20px);
+    overflow-x: hidden;
+    scrollbar-width: thin;
 }
+
+
 
 #face{
     width: 100%;
@@ -47,6 +48,18 @@ h1{
     height: auto;
 }
 
+
+#aboutMe{
+    flex: 1;
+    /* backdrop-filter: blur(50px); */
+    border-top-left-radius: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    padding: 5px;
+    /*min-height: 100;*/
+}
+
+
 .Section{
     padding: 2px;
 
@@ -54,19 +67,17 @@ h1{
     flex-direction: column;
     flex: 1;
     gap: 5px;
-
     
 }
 
 .subSection{
     width: auto;
-    border: 2px solid white;
+
     display: flex;
     flex: 1;
 }
 
 .pro-subSection{
-    border: 2px solid white;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -75,14 +86,18 @@ h1{
 #currentProject{
     width: auto;
     flex: 0.75;
-    display: flex;
+    border-radius: 10px;
+    border-bottom-left-radius: 30px;
+    /*backdrop-filter: blur(100px);*/
+    background:rgba(255, 255, 255, 0.1);
+    border: 1px dashed white;
+    padding: 10px;
 }
 
 
 #proficiency{
     width: auto;
     flex: 3;
-    border: 2px solid white;
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -91,7 +106,6 @@ h1{
 
 
 .skillBar{
-    border: 1px solid white;
     flex: 1;
     align-items: center;
     display: flex;
@@ -118,28 +132,57 @@ h2{
 
 .barOutline{
     border: 2px solid white;
-    border-radius: 1000px;
+    border-radius: 100px;
     width: 100%;
     height: 20px;
+    position: relative;
+
+    z-index: 2;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(100px);
+}
+
+.progressBar{
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    border-radius: 100px;
+    background: #55ff80;
+}
+
+
+.oldBar{
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    border-radius: 100px;
+    background: #4a8b56;
+    transition: width 2s;
+}
+
+hr{
+    color: rgb(255, 255, 255);
+    width: 50%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+    size: 1px;
 }
 
 #projects{
     width: auto;
     flex: 1;
-    border: 2px solid white;
-    display: flex;
     padding: 0px;
 }
 
-#aboutMe{
-    flex: 1;
-    backdrop-filter: blur(50px);
-    border-top-left-radius: 5%;
-    background: rgba(255, 255, 255, 0.05);
-    color: white;
-    padding: 5px;
-    /*min-height: 100;*/
+#pastProjectsGroup{
+    border: 1px solid white;
+    height: 100%;
+    width: 100%;
+    
 }
+
 
 #languages{
     width: auto;
@@ -165,7 +208,7 @@ h2{
 
 .icon-row svg {
     margin: 5px;
-    backdrop-filter: blur(50px);
+    /* backdrop-filter: blur(50px); */
     background: rgba(255, 255, 255, 0.07);
     border-radius: 10px;
     fill: white;
@@ -183,10 +226,10 @@ h2{
     fill: #90bb9b;
 }
 .icon-grid .icon-row:nth-child(1) svg:nth-of-type(2) {
-    fill: #5caa70;
+    fill: #35ff68;
 }
 .icon-grid .icon-row:nth-child(1) svg:nth-of-type(3) {
-    fill: #6ac581;
+    fill: #64da82;
 }
 .icon-grid .icon-row:nth-child(1) svg:nth-of-type(4) {
     fill: #5de67f;
@@ -204,3 +247,28 @@ h2{
 .icon-grid .icon-row:nth-child(2) svg:nth-of-type(4) {
     fill: #90bb9b;
 }
+
+
+
+
+
+ /* width */
+ ::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #4a8b56;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
