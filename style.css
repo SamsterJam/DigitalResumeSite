@@ -40,7 +40,7 @@ h1{
     flex: 1;
     overflow: scroll;
     max-height: 97vh;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(30px);
     overflow-x: hidden;
     scrollbar-width: thin;
 }
@@ -60,12 +60,11 @@ h1{
 #aboutMe{
     flex: 1;
     /* backdrop-filter: blur(50px); */
+    border-radius: 5px;
     border-top-left-radius: 20px;
     background: rgba(255, 255, 255, 0.05);
     color: white;
     padding: 10px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
     /*min-height: 100;*/
 }
 
@@ -76,7 +75,7 @@ h1{
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 5px;
+    gap: 10px;
     
 }
 
@@ -143,7 +142,8 @@ h2{
 .barOutline{
     border: 2px solid white;
     border-radius: 100px;
-    width: 100%;
+    width: auto;
+
     height: 20px;
     position: relative;
 
@@ -222,6 +222,85 @@ hr{
     border-radius: 10px;
     flex: 1;
 }
+
+
+#twoForOne-Wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+
+#SandW{
+    width: 100%;
+    min-width: 400px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+#SandW-Wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.swCol{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.headBar{
+    background: #FFFFFF;
+    border-radius: 4px;
+    min-height: 25px;
+    width: 100%;
+}
+
+ul{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+#portfolio{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    justify-content: space-between;
+    max-width: 700px;
+}
+
+#port-links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#port-links a{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#port-links svg{
+    fill: white;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.07);
+    padding: 10px;
+    cursor: pointer;
+    max-width: 200px;
+}
+
+#port-links svg:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
 
 
 .icon-grid {
